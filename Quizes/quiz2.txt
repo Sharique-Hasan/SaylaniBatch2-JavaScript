@@ -1,0 +1,23 @@
+1) var num = "10";
+
+   alert(+num--);
+
+   alert(num);
+2) num = 10++; 
+   alert(7++);
+   alert(num)
+3) var num = 10;
+   num = num + num++;
+4) var num = 10;
+   num = num++ - num-- + num;
+5) var num = "10";
+   num = num-- + num-- + num--;
+   alert(num)
+6) var num = "10";
+   
++num = num;
+   alert(num);
+7) var abc = 10;
+   var abc;
+   alert(abc); 
+8) var totalCost = 1 + 3 * 4;

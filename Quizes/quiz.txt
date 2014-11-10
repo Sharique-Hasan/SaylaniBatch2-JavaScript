@@ -1,0 +1,43 @@
+
+1) Inside which HTML element do we put the JavaScript?
+2) What is the keyword that displays a message box?
+3) alert syntex.
+	a)alert "message";
+	b)alert 'message';
+	c)alert("message");
+	d)alert('message');
+	e)Alert("message");
+	f)Alert('message');
+4) What is the keyword that declares a variable?
+5) how to declared a variible?
+6) how to declared multiple variable in one line/statement?
+7) In a single statement declare a variable and assign a string to it. 
+8) Assign a string to a variable that has already been declared.
+9) This statement has already been coded.
+var bestMan = "Charlie";
+Assign the variable a new string value.
+10) how to alert a variable?
+11) If a number is enclosed in quotes, it's a ______. example.("10")? 
+12) What is the value of total?
+	var a = 100;
+	var b = 10;
+	var total = a + b;
+13) alert('10' + '20');
+14) alert(10 + '20');
+15) In a single statement declare a variable and assign a number to it. 
+16) Rewrite this using camelCase.
+var Nameofband;
+17) Legal and Illegal variables names.
+	a) COUNT
+	b) 1st
+	c) _file1
+	d) FILE*
+	e) $count
+	f) The Answer
+	g) user$name
+	h) alert
+	i) HOME_DIRECTORY
+
+18) alert(20 % 6); alert(2 + 4 * 2);
+19) How can we add a single line comment in JavaScript?
+20) How to insert a comment that has more than one line?
