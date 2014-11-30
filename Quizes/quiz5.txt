@@ -1,0 +1,161 @@
+1) if (city = "Las Vegas") { 
+       alert("Las Vegas")
+   }
+   alert(city)
+
+
+
+
+
+
+
+
+
+
+
+
+
+2)  if (UndefinedValue) { 
+        alert("if") 
+        }
+    else { 
+        alert("else")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3)  if (false) { alert("if") }
+    else { alert("else") }
+    if(true){ alert("2nd if") }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4)  var a; 
+    (a || func)();
+    (a && func)();
+    function func(){
+        alert("func")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5)  function chicken() { 
+       return egg();
+    } 
+    function egg() { 
+        return chicken();
+    } 
+    alert(chicken() + " came first.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6)  function power(base, exponent) { 
+        if (exponent == 0) 
+            return 1;
+        else 
+            return base * power(base, exponent - 1);
+    }
+
+    alert(power(2,4))
+    (2,(2,(2,(2,1))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7)  var string = ""
+    if(string){
+        alert(string + "if");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8)  funtion gradeFunc(obtMarks, totalMarks){
+        // code here
+        return grade;
+    }

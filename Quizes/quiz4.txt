@@ -1,0 +1,96 @@
+1) function func (){}
+   alert(typeof func)
+   alert(typeof func())
+
+2) function func(){
+      alert("1");
+   }
+   alert("2")
+   func();
+
+3) function func(){
+       var a = 10
+   }
+   alert(a)
+   func();
+
+4) alert(typeof func);
+   func()
+   function(){
+      alert(1)
+   }
+   alert(2);
+   func();
+
+5) function func(val, action){
+       action(val)
+       alert(1)
+   }
+   func(10, function(a){
+       alert(a);
+   });
+
+6) var a = "hello";
+   function func(){
+      var a = "world";
+      alert(a)
+   }
+   alert(a);
+   func()
+   alert(a);
+
+7) function func(val, action){
+       alert(action(val))
+   }
+   func(10, function(a){
+       return 10;
+   });
+
+8)  function func(){
+      var name = "hello";
+      return name;
+      name = "world";
+   }
+   alert(func())
+9) function func(){
+      var num  10;
+      return num;
+   }
+   var a = func()++;
+   alert(a);
+
+10) var x = "A";
+    function func() { 
+        x = "B";
+    }
+    func(); 
+    alert(x);
+
+11) function makeAdder(amount) { 
+        return function(number) { 
+            return number + amount;
+        };
+    }
+    
+
+12) function makeAdder(amount) { 
+        return function(number) { 
+            return number + amount;
+        };
+    }
+    var addTwo = makeAdder(2);
+    alert(addTwo(3)); 
+
+13) alert( 
+        function(){
+            return 10;
+        }()
+    );
+
+
+
+14) alert( 
+        +function(){
+            alert(10);
+        }()
+    );
