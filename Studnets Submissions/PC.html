@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Percentage Calculator</title>
+<script>
+function func(ObM,TM){
+
+if(TM>ObM){
+var pc=ObM/TM*100;
+var grade;
+if(pc>=80){
+grade="Your grade is A with " + pc + "% Numbers. Congratulations";
+}
+else if(pc>=70){
+grade="Your grade is B with " + pc + "% Numbers. Congratulations";
+}
+else if(pc>=60){
+grade="Your grade is C with " + pc + "% Numbers. Congratulations";
+}
+else if(pc<60){
+grade="Sorry!!! You are Fail";
+}
+}else{alert("Sorry!!! Wrong Value Inserted");
+grade="Plese Try again!";
+}
+return grade;
+
+}
+
+alert(func(+prompt("Enter Your Obtained Marks"),+prompt("Enter Total Marks")));
+</script>
+</head>
+<body></body></html>

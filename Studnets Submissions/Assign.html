@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    function marksgrade(obtmarks,totalmarks){
+        var per=(obtmarks/totalmarks)*100;
+
+        if(per>=80){
+            alert("A1 grade");
+        }
+        else if(per<=80 && per>=70){
+            alert("A grade");
+        }
+        else if(per<=70 && per>=60){
+            alert("B grade");
+        }
+        else if(per<=60 && per>=50){
+            alert("C grade");
+        }
+        else if(per<=50 && per>=40){
+            alert("D grade");
+        }
+        else{
+            alert("fail")
+        }
+    }
+    marksgrade(950,1100);
+
+</script>
+
+
+</body>
+</html>

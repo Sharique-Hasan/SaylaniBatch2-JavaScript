@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java script calculator </title>
+<style>
+*
+{
+    background-color: rgba(121, 115, 101, 0.97);
+
+
+
+}
+header
+{
+ background-color: rgba(121, 25, 34, 0.97);
+ border: 1px solid black;
+ height: 150px;
+ font-size: 1.1em;
+ text-align: center;
+}
+input
+ {
+    width: 50px;
+    height: 50px;
+    font-size: 2.0em;
+    background-color: rgba(20, 79, 116, 0.97);
+    color: white;
+}
+input:hover
+{
+    background-color: rgba(139, 33, 111, 0.97);
+}
+#display
+{
+    border: 8px solid black;
+    height: 30px;
+    font-size: 2.0em;
+
+}
+.calculator
+{
+    border: 16px solid rgba(38, 44, 50, 0.55);
+    margin: 0 auto;
+    width: 217px;
+    margin-top: 50px;
+
+}
+</style>
+
+</head>
+<body>
+<header>
+ <h1>Sufiyan Mansoor</h1>
+ <p>Roll no:::1959 Saylani batch 2</p>
+
+</header>
+<div class="calculator">
+        <div id="display">
+        0
+        </div>
+<div class="operationkey">
+    <div class="1st">
+        <input type="button" value="7" onclick="assign('7')">
+        <input type="button" value="8" onclick="assign('8')">
+        <input type="button" value="9" onclick="assign('9')">
+        <input type="button" value="C" onclick="abc()">
+    </div>
+    <div class="2nd">
+        <input type="button" value="4" onclick="assign('4')">
+        <input type="button" value="5" onclick="assign('5')">
+        <input type="button" value="6" onclick="assign('6')">
+        <input type="button" value="/" onclick="operator1('/')">
+    </div>
+    <div class="3rd">
+        <input type="button" value="1" onclick="assign('1')">
+        <input type="button" value="2" onclick="assign('2')">
+        <input type="button" value="3" onclick="assign('3')">
+        <input type="button" value="*" onclick="operator1('*')">
+    </div>
+    <div class="4rth">
+        <input type="button" value="0" onclick="assign('0')">
+        <input type="button" value="=" onclick="isEqual()">
+        <input type="button" value="+" onclick="operator1('+')">
+        <input type="button" value="-" onclick="operator1('-')">
+    </div>
+</div>
+</div>
+<script>
+   var value1,value2,operator,display;
+   display=document.getElementById('display');
+   function operator1(sign){
+       operator=sign;
+       display.innerHTML=operator;
+   }
+   function abc(){
+       value1=undefined;
+       value2=undefined;
+       operator=undefined;
+       display.innerHTML="0";
+   }
+   function assign(value){
+       if(operator==undefined){
+           if(value1==undefined){
+           value1=value;
+          }
+      else{
+       value1+=value;
+       //value1=value1+value;
+     }
+       display.innerHTML=value1;
+   }
+   else
+   {
+     if(value2==undefined){
+         value2=value;
+       }
+    else {
+         value2+=value;
+         //value2=value2+value;
+     }
+     display.innerHTML=value2;
+     }
+   }
+   function isEqual(){
+       value1=parseInt(value1);
+       value2=parseInt(value2);
+   if(operator=='+'){
+       value1=value1+value2;
+       display.innerHTML=value1;
+   }
+   else if(operator=='-'){
+       value1=value1-value2;
+       display.innerHTML=value1;
+   }
+   else if(operator=='*'){
+       value1=value1*value2;
+       display.innerHTML=value1;
+   }
+   else if(operator=='/'){
+       value1=value1/value2;
+       display.innerHTML=value1;
+   }
+   }
+</script>
+</body>
+</html>

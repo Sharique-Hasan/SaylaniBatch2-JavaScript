@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>calculator programe</title>
+
+
+<script>
+    function func(v){
+
+
+        do{
+            var repeat = false;
+                v = prompt("enter a num");
+            if(v == null){
+                exit()
+            }
+            var a = (v === "") ? "empty": +v; /*Conditional Operator*/
+
+            if(a !== "empty" && a.toString() === "NaN"){
+                alert("you have entered a letter instead of" +
+                        "number\nhit Esc or cancel any time to exit ");
+                repeat = true;
+            }
+            if(a === "empty"){
+                alert("don't leave box empty\n" +
+                        "or you can press Esc or cancel any time to exit");
+                repeat = true;
+            }
+        }
+        while(repeat);
+
+    return v;
+    }
+
+
+    var a= +func();
+    var b= +func();
+
+    do{
+        var repeat = false;
+        var c= prompt("enter a sign like + , - , * or /") ;
+        switch (c) {
+            case null:
+                exit();
+                break;
+            case "+":
+                alert("sum of two numbers is " + (a + b));
+                break;
+            case "-":
+                alert("subtract of two numbers is " + (a - b));
+                break;
+            case "*":
+                alert("product of two numbers is " + (a * b));
+                break;
+            case "/":
+                alert("division of two numbers is " + (a / b));
+                break;
+            case "":
+                repeat = true;
+                alert("don't leave the box empty\n" +
+                        "or you can press Esc or cancel any time to exit");
+                break;
+            default:
+                repeat = true;
+                alert("you have entered an invalid sign\n" +
+                        "plz select from + , - , * or /\n" +
+                        "or press Esc or cancel any time to exit.")
+
+
+        }
+    }
+    while(repeat);
+    alert("thank you for giving your precious time")
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

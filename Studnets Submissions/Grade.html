@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lab Assignment</title>
+    <style>
+      body {
+          width: 960px;
+          margin: 0 auto;
+          text-align:  center;
+          font-family: sans-serif;
+          background-color: #dcdcdc;
+          color: #000000;
+      }
+      h1,h2 {
+          text-shadow: 1px 2px 2px #000000;
+          margin-bottom: 60px;
+      }
+      #page {
+          margin: 0 auto;
+          text-align:  center;
+      }
+      p {
+          font-weight: bolder;
+          margin-top: 30px;
+      }
+      input {
+          box-shadow: 2px 2px 2px #000000;
+          outline-color: #000000;
+
+      }
+        #act{
+            background-color: dimgrey;
+            padding: 5px;
+            text-shadow: 1px 1px 2px #000000;
+        }
+    </style>
+</head>
+<body>
+<h1>
+    Fahad Ahmed Qureshi(1448)
+</h1>
+<h2>
+    Grade Assignment
+</h2>
+<div id="page">
+    <form name="frm">
+        <label>
+        <input type="text" name="txt"/>
+        <input type="text" name="txt1"/>
+        <input type="button" id="act" value="Calculate" onclick="apply ()" readonly/>
+        </label>
+    </form>
+    <p id="result"></p>
+    <p id="grade"></p>
+</div>
+<script>
+    function apply () {
+        obtainedNumber = frm.txt.value;
+        totalNumber = frm.txt1.value;
+        result = (parseInt(obtainedNumber) / parseInt(totalNumber)) * 100;
+        percentage = document.getElementById("result");
+        finished = result.toFixed(2);
+        if (obtainedNumber>totalNumber || isNaN(obtainedNumber||totalNumber)){
+            document.getElementById("result").innerHTML="Wrong Input";
+
+        }
+        else if (result>=80){
+            document.getElementById("result").innerHTML="Congratulation You Are Passed With A1 Grade <br/> And Your Percentage is " +finished;
+        }
+        else if (result>=70){
+            document.getElementById("result").innerHTML="Congratulation You Are Passed With A Grade <br/> And Your Percentage  is " +finished;
+        }
+        else if (result>=60){
+            document.getElementById("result").innerHTML="Congratulation You Are Passed With B Grade <br/> And Your Percentage  is " +finished;
+        }
+        else if (result>=50){
+            document.getElementById("result").innerHTML="Congratulation You Are Passed With C Grade <br/> And Your Percentage  is " +finished;
+        }
+        else if (result>=40){
+            document.getElementById("result").innerHTML="Congratulation You Are Passed With D Grade <br/> And Your Percentage  is " +finished;
+        }
+        else {
+            document.getElementById("result").innerHTML="Enter Your Marks"
+        }
+    }
+</script>
+</body>
+</html>

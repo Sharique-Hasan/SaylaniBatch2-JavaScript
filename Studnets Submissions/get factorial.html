@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        p{font-size: 72px;
+          font-family: Segoe UI Light, arial, sans-serif;
+          color: #66c2ff;
+          text-align: center;
+          text-shadow: 1px 1px 300px black;
+        }
+        p.author{
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>     Factorial program     </p>
+<p class="author">by: Inzamam Malik 2225</p>
+<script>
+    function factorial(value){
+        value = (value == 0) ? 1 : value;
+        var log = value;
+
+        for(var a = value-1 ; a>0 ; a--){
+            log = log * a;
+        }
+        return log;
+    }
+
+
+    var a, repeat;
+    do{
+        repeat = 0;
+        a = prompt("enter a number to get factorial","5");
+        if(isNaN(a)){
+            repeat=1;
+            if(a == ""){
+                alert("don't leave the box empty")
+            }
+            else if(a == null)
+                exit();
+            else
+                alert("please enter a number, or hit Esc. any time to exit")
+        }
+    }
+    while(repeat == 1);
+
+
+    alert(factorial(a));
+
+</script>
+</body>
+</html>

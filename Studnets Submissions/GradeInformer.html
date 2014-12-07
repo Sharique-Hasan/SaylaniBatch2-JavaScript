@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Grade Informer</title>
+    <script>
+        //Declaring Variable for Result
+        var result;
+
+        //Declaring & Initializing Function
+        function grade(obtmarks,totalmarks){
+
+            result = (obtmarks/totalmarks)*100;
+
+            if(result >= 90){
+
+                alert("Congo!\n You have an A1 Grade..");
+            }
+
+            else if(result >= 80){
+
+                alert("Congo!\n You have an A Grade..");
+            }
+
+            else if(result >= 70){
+
+                alert("Good!\n You have an B Grade..");
+            }
+
+            else if(result >= 60){
+
+                alert("You have an C Grade..");
+            }
+
+            else if(result >= 50){
+
+                alert("You have an D Grade..");
+            }
+
+            else{
+
+                alert("Congo!\n You got Failed..");
+            }
+
+        }
+
+        //Executing Function
+        grade(670,800);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

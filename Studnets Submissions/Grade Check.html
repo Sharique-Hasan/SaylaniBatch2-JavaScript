@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Checking Grade</title>
+</head>
+<body>
+        <script>
+
+            var ques = new Array();
+
+            function askingTotVal(){
+                ques0 = prompt("Enter Total Marks?");
+                if (((isNaN(ques0)) || (ques0.length < 1 )) || (ques0 === " " )) {
+                    alert("Only Numbers allowed in this field");
+                    askingTotVal();
+                }
+                else{
+                    askingObtVal();
+
+                }
+            }
+
+            function askingObtVal(){
+                ques1 = prompt("Your Obtaining Marks?");
+                if (((isNaN(ques1)) || (ques1.length < 1 )) || (ques1 === " " )) {
+                    alert("Only Numbers allowed in this field");
+                    askingObtVal();
+                }
+                else{
+                    if (ques1 > ques0) {
+                        alert("You are Marks Obtaining is higher then Total Marks");
+                        askingTotVal()
+                    }
+                    calPer(ques0, ques1);
+                }
+
+            }
+
+            function calPer(totMarks, makObt){
+                ques2=makObt / totMarks *100;
+                chkGrade(ques2);
+            }
+
+            function chkGrade(makObt){
+                if (ques2 >= 80){
+                    alert("Congratulation \n Your Grade is A1 \n Excellent Working! :) ")
+                } else if (ques2 >= 70){
+                    alert("Congratulation \n Your Grade is A \n Good Working! :) ")
+                } else if (ques2 >= 60){
+                    alert("Congratulation \n Your Grade is B \n Not Bad! :) ")
+                } else if (ques2 >= 50){
+                    alert("Congratulation \n Your Grade is C \n But Need More More Work Hard")
+                } else if (ques2 < 50){
+                    alert("I am Sorry \n You are Fail \n Better Luck Next Time :(")
+                }
+            }
+
+        </script>
+</body>
+        <script>
+                askingTotVal()
+
+        </script>
+</html>

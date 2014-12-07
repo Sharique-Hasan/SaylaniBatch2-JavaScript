@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var num = new Array();
+        function TotalMarks(){
+            num0 = prompt("Enter yout total marks");
+            if(isNaN(num0) || num0 <1 || num0>800 || num0 === ""){
+                alert('You have enter wrong marks');
+                TotalMarks();                                    }
+            else{ ObtainMarks();}
+        }
+        function ObtainMarks(){
+            num1 = prompt("Enter how marks you gain");
+            if(isNaN(num1) || num1 <1 || num1>800 || num0 === ""){
+                alert("Your marks are wrong kindly insert correct marks");
+                ObtainMarks();
+            }
+            else{
+                num2 = num1 / num0 * 100
+                if(num2 > 90){
+                    alert("You have A1 Grade");
+                }
+                else{
+                    if(num2 >80 && num2 <90){
+                        alert("You have A Grade");
+                    }
+                    else{
+                        if(num2 >70 && num2< 80){
+                            alert("You have B+ Grade");
+                        }
+                        else{
+                            alert("You are fail");
+                        }
+                    }
+                }
+            }
+        }
+
+        TotalMarks()
+    </script>
+</head>
+<body>
+
+</body>
+</html>

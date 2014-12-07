@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade</title>
+</head>
+<body>
+<script>
+    function grade(obtainmarks,totalmarks){
+        var percentage=(obtainmarks/totalmarks)*100;
+        if(percentage>=80)
+        {
+            alert("A1 Grade");
+        }
+        else if(percentage>=70 && perentage<80)
+        {
+            alert("A grade");
+        }
+        else if(percentage>=60 && perentage<69)
+        {
+            alert("B grade");
+        }
+        else if(percentage>=50 && perentage<59)
+        {
+            alert("C grade");
+        }
+        else
+        {
+            alert("Fail");
+        }
+    }
+    grade(500,600);
+</script>
+</body>
+</html>
+

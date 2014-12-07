@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>1st Java</title>
+<script>
+    var arr1=[];
+    var arr=[10,20,30,40,50,60,70,80,90,100,110];
+    var arr2=new Array();
+var total= 0,avg= 0,checktotal=0;
+    document.write("<div  id='kassa'>" +
+            "</div>");
+
+    function set(){
+    var yes=document.getElementById('array');
+yes.innerHTML="";
+    for(var i=0;i<arr.length;i++) {
+        arr1.push(i+arr[i]);
+     var ask=prompt(i+": Give Your Age:",20+i);
+   ask=+ask;
+        yes.innerText +=+ "\n"+i+ "A:: arr=" + arr[i] +" = " + arr1+ "\n" ;
+arr2[i]=ask;
+total+=arr2[i];
+    }
+    for(var i=0;i<arr1.length;i++) {
+        var c=i+1;
+        yes.innerText +=c + " A:: arr=" + arr1[i] +" = " + arr1+ "\n"+arr2[i] +"\n";
+    }
+if(total!=0)
+        avg=total/arr2.length;
+        else
+avg=0;
+        yes.innerHTML +=" <h1 style='color: blue'>Average of Ages is:" +avg+"</h1>";
+
+   }
+
+    function find(){
+
+    var yes=document.getElementById('ans');
+
+  yes.innerHTML="";
+    var g=prompt("Age @ Which Number",4);
+    yes.innerText+="\n"+ g +" = "+arr2[g-1];
+    var h=prompt("Give Age To Search",24);
+    h=+h;
+    if(arr2.slice(0,arr2.length).concat(h))
+    {
+        yes.innerHTML+=' <br>' + arr2.slice()+' @ '+i;
+    }
+    var gett=false;
+    var get= "";
+    for(var i=arr2.length;i>-1;i--)
+    {
+        get=arr2[i];
+        if(get==h){
+            var c= i+1;
+            yes.innerHTML+=' <br>' + arr2[i]+' @ '+ c;
+            gett=true;
+        }
+    }
+    if(gett==true)
+    {
+        yes.innerHTML+=' <br> You Got IT:';
+    }     else
+    {
+        alert("Did not Contain Such Word");
+        yes.innerHTML="";
+    }
+/*
+var con=confirm("Do U wanna Change Any Age Sett??");
+if(con==true)
+{
+    change();
+}
+*/
+}
+    function change(){
+        var yes=document.getElementById('changed');
+        yes.innerHTML="";
+        /*
+        var g=prompt("Give Number of Given Age",4);
+        yes.innerText+="\n"+ g +" = "+arr2[g-1];
+*/
+        var h=prompt("Give Age To Be Changed",24);
+        h=+h;
+        var c= 1;
+
+        if(arr2.slice(0,arr2.length).concat(h))
+        {
+            yes.innerHTML+=' <br>' + arr2.slice()+' @ ';
+        }
+        var gett=false;
+        var get= "";
+        for(var i=arr2.length;i>-1;i--)
+        {
+            get=arr2[i];
+            if(get==h){
+                 c= i+1;
+                gett=true;
+                var k=prompt("Write Your Correct Age:",24);
+                k=+k;
+                arr2[i]=k;
+                yes.innerHTML+=' <br>' + arr2[i]+' @ '+ c;
+                var yes=document.getElementById('array');
+                yes.innerHTML="";
+                for(var i=0;i<arr2.length;i++) {
+     c=i+1;
+checktotal+=arr2[i];
+                    yes.innerText +=+ "\n"+c+ "    arr2=" + arr2[i] +" = " + arr1+ "\n" ;
+                    arr2[i]=k;
+                }
+
+            }
+        }
+        if(checktotal!=0) {
+            avg = checktotal / arr2.length;
+        } else {
+            avg = 0;
+        }
+        yes.innerHTML +=" <h1 style='color: blue'>Average of Ages is:" +avg+"</h1>";
+        if(gett==true)
+        {
+
+            yes.innerHTML+=' <br> You Got IT:';
+        }     else
+        {
+            alert("Did not Contain Such Word");
+            yes.innerHTML="";
+            find();
+        }
+    }
+function toggle(id){
+        var elem = document.getElementById(id);
+        if(elem.style.display == 'block'){
+            elem.style.display = 'none';
+        } else if(elem.style.display == 'none'){
+            elem.style.display = 'block';
+        }
+    }
+    var x =setInterval(function(){
+/*
+        toggle('answer1');
+*/
+       document.getElementById('kassa').style.content="<h1>Hassaan </h1>" ;
+
+      var width=document.getElementById('answer1').clientWidth;
+     if(width<document.documentElement.clientWidth)
+        IncreaseSize2(width=width*2);
+    },1000);
+
+    function IncreaseSize2(value){
+        value=value+1;
+        document.getElementById("answer1").style.width=value+"px";
+  }
+  /*  setTimeout(function( ) {
+        clearInterval( x );
+    },  2000);
+*/
+</script>
+<style>
+    body{
+        background: black;
+        color: white;
+    }
+    h1{
+content: "Hassaan";
+    }
+</style>
+</head>
+<body onload="">
+<h1>Hassaan
+<div id="array">
+
+    <br>Program to take ages of peoples in city, to find the average of ages in the city:
+</div>
+</h1>
+<label id="ans">
+
+</label>
+<br>
+<label id="changed">
+
+</label>
+<td class="post">
+
+<br>    <a href="#" onclick="set(); return false;">Set Ages</a>
+
+    <br>  <a href="#" onclick="change(); return false;">Change Age</a>
+  <br>  <a href="#" onclick="find(); return false;">Finding Number of Given Age</a>
+    <br>  <a href="#" onclick="toggle('answer1'); return false;">Edit</a>
+<span id="answer1" style="display: none;border: 1px solid blue;" >
+    <img src="../CSSProject/logocar1.png" >
+<textarea rows="10" cols="115" background="green">Yes man</textarea>
+</span>
+
+    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+</td>
+
+</body>
+</html>
