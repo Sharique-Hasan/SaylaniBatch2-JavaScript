@@ -1,0 +1,221 @@
+1) var arr = [];
+   alert(typeof arr);
+   alert(typeof arr[2])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2) var arr = [32,"asd",true,54,NaN,92,"qwerty"];
+   alert(arr[-2]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3) var arr = [1,2,3,4,5];
+   alert(arr[arr.length]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4) var arr = [1,2,3,4,5];
+   var arr2 = arr;
+   arr.push(6,7,8,9);
+   arr2.push(10,11,12,13);
+   console.log(arr);
+   console.log(arr2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5) var arr = [];
+   var arr2 = arr;
+   alert(arr == arr2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6) var arr = [1,2,3];
+   arr[5] = 10;
+   arr.push(4,5);
+   arr[8].push(10)
+   console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7) var arr = [1,2,3];
+   console.log( arr.unshift( arr.pop() ) );
+   console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8) var arr = [1,2,3,4,5,6,7,8,9];
+   var a = arr.splice(2, -2, 10,20);
+   console.log(arr);
+   console.log(arr.length);
+   console.log(a)
+   console.log(a.length)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
