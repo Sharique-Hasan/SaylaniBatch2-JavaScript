@@ -103,7 +103,7 @@
 
 
 5) var arr = [];
-   var arr2 = arr;
+   var arr2 = [];
    alert(arr == arr2);
 
 

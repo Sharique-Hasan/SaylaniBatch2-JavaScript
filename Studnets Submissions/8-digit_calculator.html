@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>8-digit calculator</title>
+    <style type="text/css">
+        div{
+            border: 2px solid #000000;
+            width: 200px;
+            padding: 10px;
+            margin: auto;
+            vertical-align: middle;
+        }
+        p{
+            width: 190px;
+            margin: auto;
+            padding: 0;
+        }
+        input[type="text"] {
+            display: block;
+            padding-left: 10px;
+            width: 165px;
+            margin: 0 auto;
+            margin-left: 10px;
+            border:3px solid #000000;
+            font-weight: bold;
+        }
+        input[type="button"]{
+            margin-left: 5px;
+            width: 35px;
+            margin-top: 5px;
+            border-radius: 9px;
+        }
+        input[type="button"]:hover{
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" id="in"/>
+    <p>
+        <input type="button" value="7" onclick="num('7')"/>
+        <input type="button" value="8" onclick="num('8')"/>
+        <input type="button" value="9" onclick="num('9')"/>
+        <input type="button" value="CE" onclick="cle()"/>
+    </p>
+    <p>
+        <input type="button" value="4" onclick="num('4')"/>
+        <input type="button" value="5" onclick="num('5')"/>
+        <input type="button" value="6" onclick="num('6')"/>
+        <input type="button" value="+" onclick="opp('+')"/>
+    </p>
+    <p>
+        <input type="button" value="1" onclick="num('1')"/>
+        <input type="button" value="2" onclick="num('2')"/>
+        <input type="button" value="3" onclick="num('3')"/>
+        <input type="button" value="*" onclick="opp('*')"/>
+    </p>
+    <p>
+        <input type="button" value="0" onclick="num('0')"/>
+        <input type="button" value="=" onclick="ans()"/>
+        <input type="button" value="-" onclick="opp('-')"/>
+        <input type="button" value="/" onclick="opp('/')">
+    </p>
+</div>
+<script type="text/javascript">
+    document.getElementById("in").value = 0;
+    var opp1,opp2,operator,result,lenOfFirstOperand,lenOfSecondOperand;
+        function num(value1) {
+            if(operator === undefined && opp1 === undefined) {
+                opp1 = value1;
+                document.getElementById("in").value = opp1;
+            }
+          else if (opp1 !== undefined && operator === undefined){
+                opp1 = opp1 + value1;
+                document.getElementById("in").value  = opp1;
+            }
+            else if (operator !== undefined && opp2 === undefined) {
+                opp2 = value1;
+                document.getElementById("in").value  = opp2;
+            }
+            else if (opp2 !== undefined) {
+                opp2 = opp2 + value1;
+                document.getElementById("in").value = opp2;
+            }
+            lenOfFirstOperand = opp1.length;
+            lenOfSecondOperand = opp2.length;
+           }
+    function opp(operate){
+        operator = operate;
+        if(operator === "+"){
+            document.getElementById("in").value  = "+";
+        }
+        else if(operator === "-"){
+            document.getElementById("in").value  = "-";
+        }
+        else if(operator === "*"){
+            document.getElementById("in").value = "*";
+        }
+        else if(operator === "/"){
+            document.getElementById("in").value  = "/";
+        }
+    }
+    function ans(){
+        if(lenOfFirstOperand <= 8 && lenOfSecondOperand <= 8) {
+            opp1 = parseInt(opp1);
+            opp2 = parseInt(opp2);
+            if (operator === "+") {
+                result = opp1 + opp2;
+                document.getElementById("in").value = result;
+            }
+            else if (operator === "-") {
+                result = opp1 - opp2;
+                document.getElementById("in").value = result;
+            }
+            else if (operator === "*") {
+                result = opp1 * opp2;
+                document.getElementById("in").value = result;
+            }
+            else if (operator === "/") {
+                result = opp1 / opp2;
+                document.getElementById("in").value = result;
+            }
+        }
+         else {
+            document.getElementById("in").value = "Calculation out of range";
+        }
+    }
+    function cle(){
+        opp1 = undefined;
+        opp2 = undefined;
+        operator = undefined;
+        document.getElementById("in").value  = 0;
+    }
+</script>
+</body>
+</html>

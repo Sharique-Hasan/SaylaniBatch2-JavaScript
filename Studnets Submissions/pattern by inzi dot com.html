@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+
+
+        function display1() {
+
+            function a(){
+                for(var i=0;i<10;i++){
+                 for(var j=0;j<i;j++){
+                 document.getElementById("p").innerHTML +=  "*";
+                 }
+                 document.getElementById("p").innerHTML += "<br />";
+                 }
+
+            }
+            function b(){
+                for(var i=0;i<10;i++){
+                    for(var j=0;j<=i;j++){
+                        document.getElementById("p").innerHTML +=  "* ";
+                    }
+                    document.getElementById("p").innerHTML += "<br />";
+                }
+            }
+            function c(){
+                for(var i=10;i>0;i--){
+                    for(var j=0; j<i ;j++){
+                        document.getElementById("p").innerHTML +=  "* ";
+                    }
+                    document.getElementById("p").innerHTML += "<br />";
+                }
+            }
+            function d(){
+                for(var i=10;i>0;i--){
+                    for(var j=1; j<i ;j++ ){
+                        document.getElementById("p").innerHTML +=  j + " ";
+                    }
+                    document.getElementById("p").innerHTML += "<br />";
+                }
+            }
+            function e(){
+                b();
+                c();
+            }
+            var aa = document.getElementById("list");
+            var bb = aa.options[aa.selectedIndex].text;
+
+
+
+            switch (bb.toString()){
+                case "pattern 1":
+                    a();
+                    break;
+                case "pattern 2":
+                    b();
+                    break;
+                case "pattern 3":
+                    c();
+                    break;
+                case "pattern 4":
+                    d();
+                    break;
+                case "pattern 5":
+                    e();
+                    break;
+                case "all at once":
+                    a();
+                    b();
+                    document.getElementById("p").innerHTML += "<br />";
+
+                    c();
+                    d();
+                    e();
+                    break;
+                default:
+                    alert("incorrect entry");
+
+            }
+
+        }
+        function cls(){
+            document.getElementById("p").innerHTML = "";
+
+        }
+
+    </script>
+</head>
+<body>
+<form>
+    <select id="list">
+        <option>pattern 1</option>
+        <option>pattern 2</option>
+        <option>pattern 3</option>
+        <option>pattern 4</option>
+        <option>pattern 5</option>
+        <option>all at once</option>
+    </select>
+    <input type="button" value="display now" onclick="display1()">
+    <input type="button" value="clear screen" onclick="cls()">
+
+</form>
+<p id="id"></p>
+<p id="p"></p>
+</body>
+</html>
